@@ -1,0 +1,48 @@
+export const apiRoutes = {
+  user: {
+    signUp: "/account/sign-up",
+    login: "/account/login",
+    refreshtoken: "/account/refreshtoken",
+    userProfile: "/account/userProfile",
+    setUpBusiness: "/business/setup-business",
+    userBusinessInfo: "/business/onboard-business-data",
+    getBusinessDataOne: "/business/getOne-buisness-data",
+    updateOneBusinessData: "/business/updateOne-business-data",
+  },
+  userBusiness: {
+    addProduct: "/business/addProduct",
+    updateProduct: "/business/updateProduct",
+    removeProduct: "/business/removeProduct",
+    addService: "/business/addService",
+    updateService: "/business/updateService",
+    removeService: "/business/removeService",
+    getProducts: "/business/products",
+    getServices: "/business/services",
+  },
+  adContent: {
+    generateAdContent: "/content/generate-text-content",
+    editAdContent: "/content/edit-ad-content",
+    deleteAdContent: "/content/remove-ad-content",
+    getAds: "/content/get-ads",
+    getSelectedAds: "/content/get-selected-ads",
+    addSelectedAds: "/content/add-selected-ad",
+  },
+  socialAccount:{
+    getInstagramAccount:"/social_accounts/instagram/getAccount"
+  },
+  routeHandler: {
+    setUpBusiness: "/api/setup-business",
+    getBusinessData: "/api/get-business-data",
+    updateBusinessData: "/api/update-business-data",
+    userBusiness: {
+      addProduct: "/api/business/addProduct",
+      updateProduct: "/api/business/updateProduct",
+      removeProduct: "/api/business/removeProduct",
+      addService: "/api/business/addService",
+      updateService: "/api/business/updateService",
+      removeService: "/api/business/removeService",
+      getProducts: "/api/business/getProducts",
+      getServices: "/api/business/getServices",
+    },
+  },
+};

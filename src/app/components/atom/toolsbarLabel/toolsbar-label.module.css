@@ -1,0 +1,6 @@
+.Container {
+    font-size: 0.7rem;
+    font-stretch: expanded;
+    font-family: var(--font-roboto);
+    letter-spacing: .3rem;
+}

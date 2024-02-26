@@ -1,0 +1,18 @@
+.PopOverContainer {
+    padding: .7em;
+    border-radius: 1ch;
+    border: 1px solid gray;
+    background-color: #fff;
+  }
+  
+  .PopOverItem {
+    text-align: center;
+    cursor: pointer;
+    padding: .5em;
+    border-radius: 1ch;
+    font-variant: small-caps;
+  }
+  
+  .PopOverItem:hover {
+    background-color: #f6fafb;
+  }

@@ -1,0 +1,45 @@
+.Container {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Form-Container {
+  width: 60vw;
+  border-radius: 2ch;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 2rem;
+  background-color: #ffffff;
+  overflow-y: scroll;
+}
+
+.Close {
+  float: right;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+.Close:hover {
+  color: blue;
+  font-size: 2.3rem;
+}
+
+.Categories {
+  display: flex;
+}
+
+.Categories > div {
+  width: 100%;
+}
+
+.IconWrapper {
+  margin-top: 12px;
+}

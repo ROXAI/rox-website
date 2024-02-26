@@ -1,0 +1,16 @@
+.Container {
+  border: 1px solid lightgray;
+  border-radius: 1ch;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.AddButton {
+  float: right;
+}
+
+.TextWrapper {
+  width: 85%;
+}

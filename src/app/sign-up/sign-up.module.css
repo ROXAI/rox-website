@@ -1,0 +1,26 @@
+.LoginFormContainer {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .LoginForm-wrapper {
+    width: 30rem;
+    padding: 1rem;
+    border: 1px solid lightgray;
+    border-radius: 1ch;
+  }
+
+  .loginAlertWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 12px;
+    width: 100%;
+  }
+  
+  .Navigate {
+      color: #1e266d;
+  }

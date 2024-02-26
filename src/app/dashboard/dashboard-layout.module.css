@@ -1,0 +1,12 @@
+.Dashboard {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  display: flex;
+}
+
+.right {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}

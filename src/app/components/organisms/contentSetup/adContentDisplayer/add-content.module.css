@@ -1,0 +1,48 @@
+.Container-Item1-Wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.PlaceHolderText {
+  font-family: var(--font-roboto);
+  font-style: italic;
+  font-size: 0.8rem;
+  margin-top: 12px;
+  text-align: center;
+  margin: auto;
+  width: 80%;
+}
+
+.addContainer {
+  width: 100%;
+  margin-top: 1em;
+  padding: 1em;
+  border: 1px solid lightgray;
+  border-radius: 1ch;
+}
+
+.addContainer-edit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1ch 0px 1ch 0px;
+  width: 3em;
+  color: #ffffff;
+  background-color: rgb(55, 78, 207);
+}
+
+
+
+.addContainer-item-wrapper {
+  width: 4em;
+  background-color: #ffffff;
+  font-family: var(--font-roboto);
+  font-size: 1em;
+}
+
+.addContainer-edit-wrapper {
+  display: flex;
+  justify-content: space-between;
+}

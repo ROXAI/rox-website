@@ -1,0 +1,40 @@
+{
+  "name": "social-test",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@mui/base": "^5.0.0-beta.29",
+    "axios": "^1.6.2",
+    "jwt-decode": "^4.0.0",
+    "keep-react": "^1.0.2",
+    "next": "^14.0.4",
+    "openai": "^4.12.4",
+    "query-string": "^8.1.0",
+    "react": "^18.2.0",
+    "react-date-picker": "^10.6.0",
+    "react-datepicker": "^4.25.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^4.12.0",
+    "recoil": "^0.7.7",
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "@types/cookie": "^0.5.2",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "@types/uuid": "^9.0.7",
+    "autoprefixer": "^10.4.16",
+    "eslint": "^8",
+    "eslint-config-next": "^14.0.4",
+    "postcss": "^8.4.31",
+    "tailwindcss": "^3.3.5",
+    "typescript": "^5"
+  }
+}

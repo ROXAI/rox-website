@@ -1,0 +1,99 @@
+.Container {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+}
+
+.Form-Container {
+  width: 60vw;
+  height: 60vh;
+  border-radius: 2ch;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 2rem;
+  background-color: #ffffff;
+  overflow-y: scroll;
+}
+
+.Close {
+  float: right;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+.Close:hover {
+  color: blue;
+  font-size: 2.3rem;
+}
+
+/* ------------ */
+
+.ParagraphText {
+  font-family: var(--font-roboto);
+  font-size: 0.92rem;
+  margin-bottom: 1rem;
+  margin-top: .5rem;
+}
+
+.RadioGroup-Container {
+  border: 1px solid lightgray;
+  border-radius: 1ch;
+  padding: 0.5rem;
+  font-size: 1.4rem;
+  display: flex;
+  margin-bottom: .5rem;
+  cursor: pointer;
+}
+
+.RadioGroup-Container > input {
+  margin-right: 1rem;
+  margin-left: 1rem;
+}
+
+.Radio-Desc {
+  font-family: var(--font-roboto);
+  font-size: 0.92rem;
+}
+
+.Radio-label {
+  font-family: var(--font-roboto);
+  font-size: 1.2rem;
+}
+
+.RadioGroup-Container:hover,
+.RadioGroup-Container.selected {
+  background-color: #f2f2f2  ; /* Light gray on hover */
+  color: #263238  ; /* Blue text on hover */
+  transition: all 0.2s ease-in-out; /* Smooth transitions */
+}
+
+.RadioGroup-Container.selected {
+  background-color: #007bff; /* Blue background when selected */
+  color: #fff; /* White text when selected */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15); /* Subtle shadow */
+}
+
+/* Animations for added flair */
+.RadioGroup-Container.selected {
+  animation: pulse 0.5s ease-in-out; /* Subtle pulse animation */
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

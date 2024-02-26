@@ -1,0 +1,27 @@
+.Card {
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid lightgray;
+  border-radius: 1ch;
+  max-width: 20rem;
+  position: relative;
+}
+
+.Edit {
+  width: 3rem;
+  height: 2rem;
+  background-color: #f6fafb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-radius: 0 1ch 0 0;
+}
+
+.IconTextWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}

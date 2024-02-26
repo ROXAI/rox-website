@@ -1,0 +1,45 @@
+.Container {
+  width: 25em;
+  height: 7em;
+  border: 2px solid gray;
+  border-radius: 1ch;
+  color: var(--primary-color);
+  border: 1px solid var(--primary-border-color);
+  background-color: var(--primary-background);
+  display: flex;
+  justify-content: space-between;
+  margin: 12px;
+}
+
+.Icon-text-wrapper {
+  display: flex;
+}
+
+.Icon-text {
+  margin-top: 12px;
+  font-family: var(--roboto);
+  font-size: 18px;
+  font-weight: medium;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.Icon-text-item {
+  margin-right: 12px;
+  color: #6B6B6B;
+}
+
+.chip-btn {
+    display: inline-flex;
+    align-items: center;
+    height: 32px;
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #022;
+    font-family: sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--secondary-color);
+  }

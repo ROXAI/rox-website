@@ -1,0 +1,23 @@
+.Edit {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  color: black;
+  border: 1px solid lightgray;
+  border-radius: 1ch;
+  padding: 12px;
+  width: 6rem;
+  cursor: pointer;
+}
+
+.IconText {
+  padding: .4rem;
+  font-size: .8rem;
+  border-radius: 1ch;
+  background-color: #d9d9d9;
+  margin-right: 12px;
+}
+
+.IconText > span {
+  cursor: pointer;
+}

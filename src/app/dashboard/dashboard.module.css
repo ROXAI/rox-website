@@ -1,0 +1,12 @@
+.Dashboard {
+  display: flex;
+}
+
+.left {
+  width: 20vw;
+  background-color: red;
+}
+
+.right {
+  width: 80vw;
+}

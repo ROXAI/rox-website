@@ -1,0 +1,16 @@
+@import "keep-react/src/main.min.css";
+
+[data-theme="light"] {
+  --primary-background: #f0f2f5;
+  --secondary-background: #90a4ae;
+  --primary-border-color: lightgray;
+  --primary-color: #000;
+  --secondary-color: #fff;
+}
+
+[data-theme="dark"] {
+  --primary-background: #000;
+  --secondary-background: #607d8b;
+  --primary-border-color: lightgray;
+  --primary-color: #fff;
+}

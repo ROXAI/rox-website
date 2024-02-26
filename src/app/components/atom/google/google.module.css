@@ -1,0 +1,20 @@
+.Google-auth {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: .7rem;
+  border: 1px solid #000;
+  border-radius: 5ch;
+  transition: 0.3s ease-in-out;
+  margin-top: 12px;
+  cursor: pointer;
+}
+
+.Google-auth:hover {
+  background-color: #000;
+  color: #ffffff;
+}
+
+.Icon {
+    margin-right: 12px;
+}

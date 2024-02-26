@@ -1,0 +1,46 @@
+.Btn {
+  background-color: #101541;
+  color: #ffffff;
+  height: 3rem;
+  border-radius: 2ch;
+  margin: 1rem;
+  font-variant: capitalize;
+  font-size: 1.4rem;
+  font-weight: 500;
+  font-family: var(--font-roboto);
+  float: right;
+}
+
+.Btn-disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* mainbutton */
+.MainBtn{
+  background-color: #101541;
+  color: #ffffff;
+  height: 3rem;
+  border-radius: 2ch;
+  font-variant: capitalize;
+  font-size: 1.4rem;
+  font-weight: 500;
+  font-family: var(--font-roboto);
+}
+
+/* test button */
+.Btn-test {
+  background-color: #101541;
+}
+
+
+.Add {
+  cursor: pointer;
+  transition: .1.7s ease-in-out;
+  border: none;
+  background: none;
+}
+
+.Add:hover{
+  color: rgb(81, 73, 190);
+}

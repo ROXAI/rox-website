@@ -1,0 +1,17 @@
+.Title {
+  font-family: var(--font-roboto);
+  font-variant: capitalize;
+  font-weight: 500;
+}
+
+.Heading1 {
+  font-family: var(--font-roboto-serif);
+  font-variant: capitalize;
+  font-weight: 500;
+}
+
+.Paragraph {
+  font-family: var(--font-roboto);
+  font-size: 1rem;
+  margin-top: 12px;
+}
