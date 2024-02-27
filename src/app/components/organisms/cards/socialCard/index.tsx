@@ -22,7 +22,7 @@ const SocialCard: React.FC<SocialCardProps> = ({ icon, name }) => {
         </div>
       </div>
       <div>
-        <Link href={"/social-accounts/instagram"}>
+        <Link href={"/dashboard/social-accounts/instagram"}>
           <button className={styles["chip-btn"]}>connect account</button>
         </Link>
       </div>

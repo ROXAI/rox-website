@@ -27,8 +27,9 @@ export const apiRoutes = {
     getSelectedAds: "/content/get-selected-ads",
     addSelectedAds: "/content/add-selected-ad",
   },
-  socialAccount:{
-    getInstagramAccount:"/social_accounts/instagram/getAccount"
+  socialAccount: {
+    getInstagramAccount: "/social_accounts/instagram/getAccount",
+    createAccount: "/social_accounts/instagram/createAccount",
   },
   routeHandler: {
     setUpBusiness: "/api/setup-business",

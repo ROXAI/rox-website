@@ -1,14 +1,26 @@
 "use client";
 
-import { FB_BusinessLogin } from "@/app/Actions/facebook/business-login";
+import { IG_BusinessLogin } from "@/app/Actions/facebook/business-login";
 
-const InstagramCard = () => {
+interface InstagramCardProps {
+  accountData: any;
+}
+
+const InstagramCard: React.FC<InstagramCardProps> = ({ accountData }) => {
+  if (!accountData)
+    return (
+      <div>
+        <h1>
+          please connect your instagram account by clicking the button below
+        </h1>
+        <button onClick={() => IG_BusinessLogin()} type="button">
+          login to meta suit
+        </button>
+      </div>
+    );
   return (
     <div>
-      <h2>instagram login</h2>
-      <button onClick={() => FB_BusinessLogin()} type="button">
-        login to meta suit
-      </button>
+      <h2>welcome to instagram</h2>
     </div>
   );
 };

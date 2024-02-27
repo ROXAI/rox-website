@@ -28,6 +28,7 @@ export const apiMutationWithFetch = (
       method: method,
       headers: {
         Authorization: `${token || accessToken?.value}`,
+        "Content-Type": "application/json",
       },
       body: JSON.stringify(data),
     });

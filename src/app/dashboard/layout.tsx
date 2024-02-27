@@ -14,13 +14,13 @@ export default function DashboardLayout({
   children: React.ReactNode;
 }) {
   return (
-    <main className={layoutStyles["Dashboard"]}>
-       <NewsBar userEmail={"nick@gmail.com"} />
-      <div className={layoutStyles["left"]}>
-        <Sidebar />
-      </div>
-      <div className={layoutStyles["right"]}>
-        {children}
+    <main>
+      <NewsBar userEmail={"nick@gmail.com"} />
+      <div className={layoutStyles["Dashboard"]}>
+        <div className={layoutStyles["left"]}>
+          <Sidebar />
+        </div>
+        <div className={layoutStyles["right"]}>{children}</div>
       </div>
     </main>
   );

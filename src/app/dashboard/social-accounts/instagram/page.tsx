@@ -8,12 +8,19 @@ import { apiMutationWithFetch } from "@/helpers/api_mutation";
 import { apiServerQuery } from "@/helpers/api_query";
 import { getMetaUserAuthData } from "@/helpers/facebook";
 
+import styles from "./styles/instagram.module.css"
+
 const instagramAuth = async (searchParams: facebookLoginResponseParams) => {
   if (searchParams && Object.keys(searchParams).length !== 0) {
     if (searchParams.error) throw new Error(searchParams.error_description);
-    const fbAuthData = await getMetaUserAuthData(searchParams.code);
+    const fbAuthData = await getMetaUserAuthData(
+      searchParams.code,
+      "social-accounts/instagram"
+    );
+    const url = apiRoutes.socialAccount.createAccount;
     const apiMutation = apiMutationWithFetch();
-    const data = await apiMutation("", fbAuthData);
+    const data = await apiMutation(url, fbAuthData);
+
     return data;
   }
 
@@ -26,13 +33,10 @@ const instagramAuth = async (searchParams: facebookLoginResponseParams) => {
 
 export default async function Home(req: PageReqMetaData) {
   try {
-    const user = await instagramAuth(req.searchParams);
-    console.log("====================================");
-    console.log(user);
-    console.log("====================================");
+    const res = await instagramAuth(req.searchParams);
     return (
-      <main>
-        <InstagramCard />
+      <main className={styles["Container"]}>
+        <InstagramCard accountData={res.data} />
       </main>
     );
   } catch (error: any) {

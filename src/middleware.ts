@@ -6,7 +6,7 @@ import { Auth } from "./app/ts/types/enums";
 // This function can be marked `async` if using `await` inside
 export async function middleware(request: NextRequest) {
   const { isUserAuthenticated } = new validateUser();
-  const {} = request.url;
+
   console.log("testing middleware", request.url);
   if (!request.cookies.has(Auth.token))
     return NextResponse.redirect(new URL("/login", request.url));
@@ -33,5 +33,5 @@ export async function middleware(request: NextRequest) {
 
 // See "Matching Paths" below to learn more
 export const config = {
-  matcher: ["/dashboard", "/business-setup"],
+  matcher: ["/dashboard", "/business-setup", "/social-accounts/instagram"],
 };
