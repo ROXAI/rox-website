@@ -10,7 +10,7 @@ const getAccountData = async () => {
   return data as SocialAccount;
 };
 
-export const InstagramCard = async () => {
+export const InstagramMiniCard = async () => {
   try {
     const data = await getAccountData();
     return (

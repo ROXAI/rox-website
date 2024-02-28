@@ -11,7 +11,7 @@ interface ScheduleAdPostProps {
 export const ScheduleAdPostConponent: React.FC<ScheduleAdPostProps> = ({
   components,
 }) => {
-  const [navCount, setNavCount] = useState(1);
+  const [navCount, setNavCount] = useState(0);
   const [ads] = useGeneratedContentState();
   const [selectedAds] = useSelectedAds();
 
