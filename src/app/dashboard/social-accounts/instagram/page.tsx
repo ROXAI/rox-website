@@ -1,6 +1,7 @@
 import InstagramCard from "@/app/components/organisms/Instagram/instagram";
 import {
   PageReqMetaData,
+  SocialAccount,
   facebookLoginResponseParams,
 } from "@/app/ts/interface";
 import { apiRoutes } from "@/data/routes";
@@ -19,36 +20,31 @@ const instagramAuth = async (searchParams: facebookLoginResponseParams) => {
     );
     const url = apiRoutes.socialAccount.createAccount;
     const apiMutation = apiMutationWithFetch();
-    const data = await apiMutation(url, fbAuthData);
+    const { data } = await apiMutation(url, fbAuthData);
 
-    return data;
+    return data as SocialAccount;
   }
 
   // get instagram user
   const apiQuery = apiServerQuery();
   const url = apiRoutes.socialAccount.getInstagramAccount;
-  const instagramUser = await apiQuery(url);
-  return instagramUser;
+  const { data } = await apiQuery(url);
+  return data as SocialAccount;
 };
 
 export default async function Home(req: PageReqMetaData) {
   try {
-    const res = await instagramAuth(req.searchParams);
-    console.log("====================================");
-    console.log(res);
-    console.log("====================================");
+    const data = await instagramAuth(req.searchParams);
 
     return (
       <main className={styles["Container"]}>
-        <InstagramCard accountData={res.data} />
+        <InstagramCard accountData={data} />
       </main>
     );
   } catch (error: any) {
-    const nock: any = {};
     return (
       <div className={styles["Container"]}>
-        {/* <span>error occured {error.code}</span> */}
-        <InstagramCard accountData={nock} />
+        <span>error occured {error.code}</span>
       </div>
     );
   }

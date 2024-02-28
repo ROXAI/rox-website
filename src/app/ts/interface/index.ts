@@ -29,6 +29,7 @@ interface tokenManager {
 }
 
 export interface SocialAccount {
+  _id: string;
   userBusinessId: string;
   userId: string;
   tokenManager: tokenManager;

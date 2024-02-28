@@ -1,4 +1,3 @@
-"use client"
 import { Icon } from "@/app/components/atom/icons";
 import styles from "./social-card.module.css";
 import Chip from "@/app/components/atom/chip";
@@ -6,9 +5,17 @@ import Link from "next/link";
 
 interface SocialCardProps {
   icon: string;
-  name:string
+  name: string;
+  accountStatus: boolean;
 }
-const SocialCard: React.FC<SocialCardProps> = ({ icon, name }) => {
+
+const SocialCard: React.FC<SocialCardProps> = ({
+  icon,
+  name,
+  accountStatus,
+}) => {
+  const account = accountStatus ? "connected" : "not connected";
+  const copy = accountStatus ? "view account" : "connect account";
   return (
     <div className={styles["Container"]} data-theme="light">
       <div className={styles["Icon-text-wrapper"]}>
@@ -17,13 +24,13 @@ const SocialCard: React.FC<SocialCardProps> = ({ icon, name }) => {
           <span>{name}</span>
           <div>
             <span className={styles["Icon-text-item"]}>status</span>
-            <Chip text="connected" />
+            <Chip text={account} />
           </div>
         </div>
       </div>
       <div>
         <Link href={"/dashboard/social-accounts/instagram"}>
-          <button className={styles["chip-btn"]}>connect account</button>
+          <button className={styles["chip-btn"]}>{copy}</button>
         </Link>
       </div>
     </div>

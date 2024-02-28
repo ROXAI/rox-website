@@ -1,0 +1,15 @@
+.Text-Block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .Text-Block-Title {
+    font-weight: 200;
+  }
+  
+  .Text-Block-Title-desc {
+    font-weight: bold;
+    margin-top: 1em;
+  }

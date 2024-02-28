@@ -10,6 +10,34 @@
   height: 40vh;
 }
 
+.Account-Card-Wrapper {
+  width: 60%;
+  border: 1px solid lightgray;
+  border-radius: 1ch;
+  padding: 1em;
+}
+
 .Account-Card {
-  border: 1px solid black;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.Text-Block-Wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+}
+
+.Connect {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2em;
+}
+
+.Connect > p {
+  text-align: center;
 }
