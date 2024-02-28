@@ -1,3 +1,4 @@
+import { ReactNode } from "react";
 import styles from "./cta.module.css";
 
 interface ButtonProps {
@@ -43,7 +44,7 @@ export const MainButton: React.FC<ButtonProps> = ({
   const classes = disabled
     ? `${styles["MainBtn"]} ${styles["Btn-disabled"]}`
     : styles["MainBtn"];
-  
+
   return (
     <button
       style={{ width: `${BtnSize}rem` }}
@@ -57,35 +58,27 @@ export const MainButton: React.FC<ButtonProps> = ({
   );
 };
 
-import { Button as Btn } from "keep-react";
-
-// export const ButtonComponent: React.FC<ButtonProps> = ({
-//   text,
-//   type,
-//   size,
-//   disabled,
-//   handler,
-// }) => {
-//   return (
-//     <>
-//       <Btn
-//         className={styles["Btn-test"]}
-//         size="lg"
-//         type="primary"
-//         pill={true}
-//         onClick={handler}
-//         disabled={disabled}
-//       >
-//         Default
-//       </Btn>
-//     </>
-//   );
-// };
-
 export const AddBtn: React.FC<ButtonProps> = ({ handler, type, text }) => {
   return (
     <button onClick={handler} className={styles["Add"]} type={type}>
       {text}
     </button>
+  );
+};
+
+interface CtaProps {
+  children: ReactNode;
+  size?: "small" | "medium";
+  type: "submit" | "button";
+  disabled?: boolean;
+  handler?: () => void;
+}
+export const CTA: React.FC<CtaProps> = ({ children, handler }) => {
+  return (
+    <div>
+      <button className={styles["MainCta"]} onClick={handler}>
+        {children}
+      </button>
+    </div>
   );
 };

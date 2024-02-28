@@ -1,0 +1,15 @@
+.Container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.Icon-container {
+  width: 80%;
+  height: 40vh;
+}
+
+.Account-Card {
+  border: 1px solid black;
+}

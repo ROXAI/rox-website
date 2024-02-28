@@ -1,4 +1,13 @@
 .Container {
-  margin-top: 20em;
+  width: 100%;
+  margin-top: 5em;
   /* margin-left: 12px; */
+  padding: 1em;
+  border: 1px solid lightgray;
+  border-radius: 2ch;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
+

@@ -8,7 +8,7 @@ import { apiMutationWithFetch } from "@/helpers/api_mutation";
 import { apiServerQuery } from "@/helpers/api_query";
 import { getMetaUserAuthData } from "@/helpers/facebook";
 
-import styles from "./styles/instagram.module.css"
+import styles from "./styles/instagram.module.css";
 
 const instagramAuth = async (searchParams: facebookLoginResponseParams) => {
   if (searchParams && Object.keys(searchParams).length !== 0) {
@@ -34,12 +34,22 @@ const instagramAuth = async (searchParams: facebookLoginResponseParams) => {
 export default async function Home(req: PageReqMetaData) {
   try {
     const res = await instagramAuth(req.searchParams);
+    console.log("====================================");
+    console.log(res);
+    console.log("====================================");
+
     return (
       <main className={styles["Container"]}>
         <InstagramCard accountData={res.data} />
       </main>
     );
   } catch (error: any) {
-    return <div>error occured {error.message}</div>;
+    const nock: any = {};
+    return (
+      <div className={styles["Container"]}>
+        {/* <span>error occured {error.code}</span> */}
+        <InstagramCard accountData={nock} />
+      </div>
+    );
   }
 }

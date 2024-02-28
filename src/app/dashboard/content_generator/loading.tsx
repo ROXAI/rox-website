@@ -1,4 +1,5 @@
-import styles from "./loader.module.css";
+import PageLoader from "@/app/components/organisms/loaders/pageLoader";
+
 export default function Loading() {
-  return <div className={styles["spinner"]}></div>;
+  return <PageLoader />;
 }

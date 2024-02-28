@@ -21,3 +21,16 @@ export interface PageReqMetaData {
   searchParams: facebookLoginResponseParams;
   params: any;
 }
+
+interface tokenManager {
+  accessToken: string;
+  exp: number;
+  isValid: boolean;
+}
+
+export interface SocialAccount {
+  userBusinessId: string;
+  userId: string;
+  tokenManager: tokenManager;
+  isConnected: boolean;
+}
