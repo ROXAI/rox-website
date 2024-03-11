@@ -50,11 +50,5 @@
     background-color: #ffffff;
   }
   
-  .AdListingContainer {
-    border: 1px solid lightgray;
-    border-radius: 1ch;
-    padding: 1em;
-    display: flex;
-    flex-direction: column;
-  }
+
   

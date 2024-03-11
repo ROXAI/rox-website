@@ -27,7 +27,7 @@ export const ScheduleAdPostConponent: React.FC<ScheduleAdPostProps> = ({
         adCount={ads.length}
         selectedAdCount={selectedAds.length}
       />
-      <div className={styles["AdListingContainer"]}>{components[navCount]}</div>
+      <div>{components[navCount]}</div>
     </div>
   );
 };

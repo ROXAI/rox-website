@@ -1,12 +1,13 @@
 "use client";
+import styles from "./ad-listing.module.css";
 import { useGeneratedContentState } from "@/app/state-management/adPromotionContext";
-import { AdContentItem } from ".";
+import { AdContentItem } from "..";
 import { apiRoutes } from "@/data/routes";
 import { userBusinessInfoState } from "@/app/state-management/context";
 import { useEffect, useState } from "react";
 import { useApiQuery } from "@/app/hooks/apiQuery";
 
- const AdListing = () => {
+const AdListing = () => {
   const [{ currentSelection }] = userBusinessInfoState();
   const [ads, setAds] = useGeneratedContentState();
   const [error, setError] = useState("");
@@ -39,12 +40,15 @@ import { useApiQuery } from "@/app/hooks/apiQuery";
   if (ads.length === 0) return <span>you dont have any ads</span>;
 
   return (
-    <div>
-      {ads?.map((ad) => (
-        <AdContentItem key={ad._id} text={ad.text} id={ad._id} />
-      ))}
-    </div>
+    <>
+      <div>heloo</div>
+      <div className={styles["AdListingContainer"]}>
+        {ads?.map((ad) => (
+          <AdContentItem key={ad._id} text={ad.text} id={ad._id} />
+        ))}
+      </div>
+    </>
   );
 };
 
-export default AdListing; 
+export default AdListing;

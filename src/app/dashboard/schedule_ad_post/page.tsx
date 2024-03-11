@@ -4,7 +4,7 @@ import dynamic from "next/dynamic";
 const AdListing = dynamic(
   () =>
     import(
-      "@/app/components/organisms/contentSetup/adContentDisplayer/Adlisting"
+      "@/app/components/organisms/contentSetup/adContentDisplayer/adListing/Adlisting"
     )
 );
 const SocialAccounts = dynamic(
