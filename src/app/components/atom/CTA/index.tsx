@@ -1,5 +1,6 @@
 import { ReactNode } from "react";
-import styles from "./cta.module.css";
+import styles from "./styles/cta.module.css";
+import sasStyles from "./styles/button.module.scss";
 
 interface ButtonProps {
   text: string;
@@ -18,8 +19,8 @@ export const Button: React.FC<ButtonProps> = ({
 }) => {
   const BtnSize = size === "medium" ? 10 : size === "small" ? 7 : 7;
   const classes = disabled
-    ? `${styles["Btn"]} ${styles["Btn-disabled"]}`
-    : styles["Btn"];
+    ? `${sasStyles["Btn"]} ${sasStyles["Btn-disabled"]}`
+    : sasStyles["Btn"];
   return (
     <button
       style={{ width: `${BtnSize}rem` }}

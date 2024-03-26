@@ -1,0 +1,19 @@
+@import "../../../../saas-setup/index.scss";
+
+.Btn {
+  min-width: 5rem;
+  height: 3rem;
+  background-color: $bg-primary;
+  color: $secondary;
+  border-radius: 2ch;
+  margin: $base-margin;
+  font-variant: capitalize;
+  font-size: $font-size-lg;
+  font-weight: $font-weight-lg;
+  text-align: center;
+}
+
+.Btn-disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

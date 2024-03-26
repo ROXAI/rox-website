@@ -1,0 +1,16 @@
+@import "../../../../saas-setup/index.scss";
+
+.Container {
+  padding: $base-padding;
+}
+
+.Heading {
+  font-size: $font-size-lg;
+  font-weight: $font-weight-lg;
+  color: $primary;
+}
+
+.Desc {
+  width: 70%;
+  color: $primary;
+}

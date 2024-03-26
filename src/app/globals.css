@@ -14,3 +14,7 @@
   --primary-border-color: lightgray;
   --primary-color: #fff;
 }
+
+body {
+  font-family: var(--font-roboto);
+}

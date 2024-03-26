@@ -2,10 +2,12 @@
 import styles from "./styles/schedule-ad.module.css";
 import { ReactNode, useState } from "react";
 import { InconStep1 } from "../../atom/icons/steps/step1";
+import { Button } from "../../atom/CTA";
 
 interface ScheduleAdPostProps {
   components: { [key: number]: ReactNode };
 }
+
 export const ScheduleAdPostConponent: React.FC<ScheduleAdPostProps> = ({
   components,
 }) => {
@@ -15,19 +17,20 @@ export const ScheduleAdPostConponent: React.FC<ScheduleAdPostProps> = ({
     <div className={styles["Container"]}>
       <Navigation navCount={navCount} />
       <div>{components[navCount]}</div>
-      <div>
-        <button
-          onClick={() => setNavCount((prevState) => prevState + 1)}
-          disabled={navCount === 2}
-        >
-          next
-        </button>
-        <button
-          onClick={() => setNavCount((prevState) => prevState - 1)}
+      <div className={styles["Btn-container"]}>
+        <Button
+          text="previouse"
+          type="button"
+          size="medium"
+          handler={() => setNavCount((prevState) => prevState - 1)}
           disabled={navCount === 0}
-        >
-          previouse
-        </button>
+        />
+        <Button
+          text="next"
+          type="button"
+          handler={() => setNavCount((prevState) => prevState + 1)}
+          disabled={navCount === 2}
+        />
       </div>
     </div>
   );

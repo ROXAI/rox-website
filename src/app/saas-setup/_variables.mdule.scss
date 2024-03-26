@@ -12,9 +12,13 @@ $font-weight-lg: $base-font-weight * 1.5;
 $font-weight-xl: $base-font-weight * 2;
 $font-weight-xxl: $base-font-weight * 3;
 
-// theme colors
-$primary: #326dee !default;
-$secondary: #1ac886 !default;
+// theme colors white
+$primary: #333333 !default;
+$secondary: #fff !default;
+$bg-primary: #101541;
+$bg-secondary: #000;
+
+//theme colors
 $error: #d32752 !default;
 $info: #f6c31c !default;
 

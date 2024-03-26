@@ -9,7 +9,6 @@ import { EditAdContentForm } from "../edit_adContent";
 
 // packages
 import Image from "next/image";
-import { SelectAd } from "@/app/components/atom/selectAd";
 export const AdContentDisplay = () => {
   return (
     <>
@@ -56,7 +55,6 @@ export const AdContentItem: React.FC<AdContentItemProps> = ({ text, id }) => {
             </div>
           </SimplePopper>
         </div>
-        <SelectAd adContentId={id} />
       </div>
       <div>
         <span>{text}</span>
