@@ -1,5 +1,6 @@
 "use client";
 import styles from "./ad-listing.module.css";
+import saas from "./styles/listing.module.scss";
 import { useGeneratedContentState } from "@/app/state-management/adPromotionContext";
 import { AdContentItem } from "..";
 import { apiRoutes } from "@/data/routes";
@@ -41,7 +42,14 @@ const AdListing = () => {
 
   return (
     <>
-      <div>heloo</div>
+      <div>
+        <h1 className={saas["Heading"]}>Your Scheduled Tweets </h1>
+        <p>
+          Here's a handy list of all your drafted tweets ready to be posted.
+          Feel free to click the check box next to any tweet to make edits or
+          remove it from the schedule.
+        </p>
+      </div>
       <div className={styles["AdListingContainer"]}>
         {ads?.map((ad) => (
           <AdContentItem key={ad._id} text={ad.text} id={ad._id} />
