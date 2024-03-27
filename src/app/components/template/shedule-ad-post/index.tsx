@@ -1,9 +1,7 @@
 "use client";
 import styles from "./styles/schedule-ad.module.css";
-import { useGeneratedContentState } from "@/app/state-management/adPromotionContext";
-import { useSelectedAds } from "@/app/state-management/helper-state";
-import { ReactNode, MouseEvent, useState } from "react";
-
+import { ReactNode, useState } from "react";
+import { InconStep1 } from "../../atom/icons/steps/step1";
 
 interface ScheduleAdPostProps {
   components: { [key: number]: ReactNode };
@@ -12,75 +10,40 @@ export const ScheduleAdPostConponent: React.FC<ScheduleAdPostProps> = ({
   components,
 }) => {
   const [navCount, setNavCount] = useState(0);
-  const [ads] = useGeneratedContentState();
-  const [selectedAds] = useSelectedAds();
-
-  const handleNavigation = (count: number) => {
-    setNavCount(count);
-  };
 
   return (
     <div className={styles["Container"]}>
-      <Navigation
-        navAction={handleNavigation}
-        navCount={navCount}
-        adCount={ads.length}
-        selectedAdCount={selectedAds.length}
-      />
+      <Navigation navCount={navCount} />
       <div>{components[navCount]}</div>
+      <div>
+        <button
+          onClick={() => setNavCount((prevState) => prevState + 1)}
+          disabled={navCount === 2}
+        >
+          next
+        </button>
+        <button
+          onClick={() => setNavCount((prevState) => prevState - 1)}
+          disabled={navCount === 0}
+        >
+          previouse
+        </button>
+      </div>
     </div>
   );
 };
 
 interface NavigationProps {
-  navAction: (count: number) => void;
   navCount: number;
-  adCount?: number;
-  selectedAdCount: number;
 }
 
-const Navigation: React.FC<NavigationProps> = ({
-  navAction,
-  navCount,
-  selectedAdCount,
-  adCount,
-}) => {
-  const handleNavigation = (event: MouseEvent<HTMLButtonElement>) => {
-    const dataId = event.currentTarget.getAttribute("data-id");
-    navAction(parseInt(dataId!));
-  };
-
-  const generateClassName = (index: number) => {
-    return `${styles["Navigation-item"]} ${
-      navCount === index && styles["Active"]
-    }`;
-  };
-
-  const buttons = [
-    { label: "all ads", count: adCount },
-    { label: "social platform", count: undefined },
-    { label: "selected ads", count: selectedAdCount },
-  ];
-
+const Navigation: React.FC<NavigationProps> = ({ navCount }) => {
   return (
     <div className={styles["Navigation-container"]}>
-      <div className={styles["Navigation-wrapper"]}>
-        {buttons.map((button, index) => (
-          <button
-            key={index}
-            onClick={handleNavigation}
-            className={generateClassName(index)}
-            data-id={index}
-          >
-            {button.label && <span>{button.label}</span>}
-            {button.count !== undefined && (
-              <span className={styles["Navigation-item-count"]}>
-                {button.count}
-              </span>
-            )}
-          </button>
-        ))}
-      </div>
+      <div className={styles["Line"]}></div>
+      <InconStep1 iconName="list" step={navCount === 0} />
+      <InconStep1 iconName="accounts" step={navCount === 1} />
+      <InconStep1 iconName="final" step={navCount === 2} />
     </div>
   );
 };

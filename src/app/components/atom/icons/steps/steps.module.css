@@ -1,0 +1,20 @@
+.Container {
+  background-color: #d9d9d9;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.step-conpleted {
+  background-color: #101541;
+}
+
+.Icon {
+  font-size: 30px;
+  color: #fff;
+}
+
+
