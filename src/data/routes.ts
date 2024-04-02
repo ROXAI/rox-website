@@ -10,6 +10,7 @@ export const apiRoutes = {
     updateOneBusinessData: "/business/updateOne-business-data",
   },
   userBusiness: {
+    updateBusinessData: "/business/updateOne-business-data",
     addProduct: "/business/addProduct",
     updateProduct: "/business/updateProduct",
     removeProduct: "/business/removeProduct",
@@ -30,6 +31,7 @@ export const apiRoutes = {
   socialAccount: {
     getInstagramAccount: "/social_accounts/instagram/getAccount",
     createAccount: "/social_accounts/instagram/createAccount",
+    createFacebookAccount: "/social_accounts/facebook/createAccount",
   },
   routeHandler: {
     setUpBusiness: "/api/setup-business",

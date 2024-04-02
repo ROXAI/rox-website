@@ -4,15 +4,21 @@ import {
   inspectAcessTokensUrl,
 } from "@/config/facebook";
 import { getEnv } from "@/utils/getEnv";
-import axios from "axios";
 
 export const getPageId = async (accessToken: string, user_id: string) => {
   const { stringifiedPageIdUrl } = getFaceBookPageId(accessToken, user_id);
-  return await fetch(stringifiedPageIdUrl);
+  const response = await fetch(stringifiedPageIdUrl);
+  const { data, error } = await response.json();
+  if (!response.ok) throw error;
+  return {
+    id: data[0].id,
+    name: data[0].name,
+    access_token: data[0].access_token,
+  };
 };
 
-export const inspectAccessToken = async (token: string, appToken: string) => {
-  const { InspectAcessTokensUrl } = inspectAcessTokensUrl(token, appToken);
+export const inspectAccessToken = async (token: string) => {
+  const { InspectAcessTokensUrl } = inspectAcessTokensUrl(token);
   return await fetch(InspectAcessTokensUrl);
 };
 
@@ -35,22 +41,15 @@ export const getMetaUserAuthData = async (
     );
     const data = await res.json();
     if (!res.ok) throw data.error;
-    const debug_token_params = {
-      input_token: data.access_token,
-      access_token: data.access_token,
-    };
-
-    const encodedParams = new URLSearchParams(debug_token_params);
-    const response = await fetch(
-      `https://graph.facebook.com/debug_token?${encodedParams.toString()}`
-    );
+    const response = await inspectAccessToken(data.access_token);
 
     const _data = await response.json();
     if (!res.ok) throw _data.error;
+
     return {
       userId: _data.data.user_id,
       accessToken: data.access_token,
-      exp: data.expires_in,
+      exp: 0,
     };
   } catch (error: any) {
     throw {

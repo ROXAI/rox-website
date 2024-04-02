@@ -19,14 +19,11 @@ export class FacebookPage {
     this.FBUserId = FBUserId?.value!;
   }
 
-  getFBPageIds = async () => {
-    const res = await getPageId(this.FBPageAccessToken, this.FBUserId);
-    const data: ManageFBPageResponse = await res.json();
-    return data.data[0];
-  };
-
   createPost = async (data: any) => {
-    const getPageIdData = await this.getFBPageIds();
+    const getPageIdData = await getPageId(
+      this.FBPageAccessToken,
+      this.FBUserId
+    );;
     return await axios(
       `https://graph.facebook.com/v18.0/${getPageIdData.id}/feed?access_token=${getPageIdData.access_token}`,
       {

@@ -97,3 +97,13 @@ export interface UserProfile {
 
 export type FormType = "product" | "service";
 export type FormActionType = "add" | "remove" | "update";
+
+// ----------------------------------------------------------------
+export interface BusinessProfile {
+  _id: string;
+  businessName: string;
+  description: string;
+  additionalDetails: string;
+  queryString: string;
+  postingStatus: "STANDARD" | "PREMIUM" | "NONE";
+}

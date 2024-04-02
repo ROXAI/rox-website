@@ -16,7 +16,7 @@ const SocialAccounts = dynamic(
 const SelectedAdListing = dynamic(
   () =>
     import(
-      "@/app/components/organisms/contentSetup/adContentDisplayer/selectedAds"
+      "@/app/components/organisms/contentSetup/adContentDisplayer/finish-step/selectedAds"
     )
 );
 

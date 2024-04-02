@@ -1,0 +1,19 @@
+@import "../../../../saas-setup/index.scss";
+
+.Container {
+  width: 60%;
+  height: 20rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.Icon-container {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.Container-btn {
+  display: flex;
+  justify-content: center;
+}

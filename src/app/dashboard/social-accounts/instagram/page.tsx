@@ -1,4 +1,4 @@
-import InstagramCard from "@/app/components/organisms/Instagram/instagram";
+import SocialAccountStatusCard from "@/app/components/organisms/Instagram/instagram";
 import {
   PageReqMetaData,
   SocialAccount,
@@ -10,13 +10,14 @@ import { apiServerQuery } from "@/helpers/api_query";
 import { getMetaUserAuthData } from "@/helpers/facebook";
 
 import styles from "./styles/instagram.module.css";
+import { IG_BusinessLogin } from "@/app/Actions/facebook/business-login";
 
 const instagramAuth = async (searchParams: facebookLoginResponseParams) => {
   if (searchParams && Object.keys(searchParams).length !== 0) {
     if (searchParams.error) throw new Error(searchParams.error_description);
     const fbAuthData = await getMetaUserAuthData(
       searchParams.code,
-      "social-accounts/instagram"
+      "dashboard/social-accounts/instagram"
     );
     const url = apiRoutes.socialAccount.createAccount;
     const apiMutation = apiMutationWithFetch();
@@ -38,7 +39,11 @@ export default async function Home(req: PageReqMetaData) {
 
     return (
       <main className={styles["Container"]}>
-        <InstagramCard accountData={data} />
+        <SocialAccountStatusCard
+          logoUrl="/icons8-instagram.svg"
+          accountData={data}
+          handler={IG_BusinessLogin}
+        />
       </main>
     );
   } catch (error: any) {

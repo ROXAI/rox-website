@@ -30,7 +30,7 @@ interface tokenManager {
 
 export interface SocialAccount {
   _id: string;
-  userBusinessId: string;
+  businessProfileId: string;
   userId: string;
   tokenManager: tokenManager;
   isConnected: boolean;
