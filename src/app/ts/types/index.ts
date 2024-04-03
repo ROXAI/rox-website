@@ -65,7 +65,7 @@ export interface UserBusinessInfoTypes {
 export interface BusinessProductAndServices {
   products: ProductsAndSevices[];
   services: ProductsAndSevices[];
-  items: ProductsAndSevices[];
+  // items: ProductsAndSevices[];
 }
 
 export interface AuthData {

@@ -32,6 +32,7 @@ export const apiRoutes = {
     getInstagramAccount: "/social_accounts/instagram/getAccount",
     createAccount: "/social_accounts/instagram/createAccount",
     createFacebookAccount: "/social_accounts/facebook/createAccount",
+    getFBAccount: "/social_accounts/facebook/getFBAccount",
   },
   routeHandler: {
     setUpBusiness: "/api/setup-business",

@@ -16,7 +16,7 @@ export const Products: React.FC<Products> = ({ product }) => {
   const [{products}, setProducts] = useProductAndServicesState();
 
   useEffect(() => {
-    setProducts((prevState) => ({ ...prevState, products: products }));
+    setProducts((prevState) => ({ ...prevState, products: product }));
   }, [product]);
   return (
     <div className={styles["Container"]}>

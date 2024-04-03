@@ -59,7 +59,6 @@ export const useProductService = () => {
 
   const hanldeAdd = (type: FormType) => {
     setFormData({
-      _id: "",
       name: "",
       description: "",
       categories: "",
@@ -150,7 +149,6 @@ export const useProductService = () => {
 
   const getFormData = () => {
     const _formData = JSON.parse(JSON.stringify(formData));
-    _formData.userBusinessId = currentSelection?._id || "";
     const _helperFormData = JSON.parse(JSON.stringify(helperFormData));
     return Object.assign(_formData, _helperFormData);
   };
@@ -231,6 +229,9 @@ export const useProductService = () => {
               ? apiRoutes.routeHandler.userBusiness.addProduct
               : apiRoutes.routeHandler.userBusiness.addService;
           const formData = getFormData();
+          console.log("====================================");
+          console.log(formData);
+          console.log("====================================");
           const { data } = await sendData(addProductOrServiceUrl, formData);
           updateProductGlobalState("add", data?.data);
           setIsDisabled(false);

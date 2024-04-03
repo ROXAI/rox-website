@@ -28,15 +28,15 @@ const ProductAndServices = atom<BusinessProductAndServices>({
         subCategories: [""],
       },
     ],
-    items: [
-      {
-        _id: uuidv4(),
-        name: "",
-        description: "",
-        categories: [],
-        subCategories: [],
-      },
-    ],
+    // items: [
+    //   {
+    //     _id: uuidv4(),
+    //     name: "",
+    //     description: "",
+    //     categories: [],
+    //     subCategories: [],
+    //   },
+    // ],
   },
 });
 

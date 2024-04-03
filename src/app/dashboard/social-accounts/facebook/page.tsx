@@ -9,6 +9,7 @@ import {
 import { getMetaUserAuthData, getPageId } from "@/helpers/facebook";
 import { apiRoutes } from "@/data/routes";
 import { apiMutationWithFetch } from "@/helpers/api_mutation";
+import { apiServerQuery } from "@/helpers/api_query";
 
 const facebookAuthData = async (searchParams: facebookLoginResponseParams) => {
   if (searchParams && Object.keys(searchParams).length !== 0) {
@@ -27,6 +28,12 @@ const facebookAuthData = async (searchParams: facebookLoginResponseParams) => {
 
     return __data as SocialAccount;
   }
+
+   // get instagram user
+   const apiQuery = apiServerQuery();
+   const url = apiRoutes.socialAccount.getFBAccount;
+   const { data } = await apiQuery(url);
+   return data as SocialAccount;
 };
 
 export default async function Home(req: PageReqMetaData) {

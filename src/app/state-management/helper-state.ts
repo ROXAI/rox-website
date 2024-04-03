@@ -42,7 +42,6 @@ const businessData = atom({
 const productOrserviceData = atom({
   key: uuidv4(),
   default: {
-    _id: "",
     name: "",
     description: "",
     categories: "",
