@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React, { ReactNode } from "react";
 import styles from "./content-setup.module.css";
 import { ContentControl } from "./contentControls";
@@ -27,7 +27,20 @@ export const ContentSetup: React.FC<ContentSetupProps> = () => {
       <div className={styles["Container"]}>
         <ContentControl />
         <div className={styles["Loader"]}>
-          {error ? <div>{error}</div> : <SpinnerComponent />}
+          <SpinnerComponent />
+        </div>
+      </div>
+    );
+  }
+
+  if (generateContentStatus === "error") {
+    return (
+      <div className={styles["Container"]}>
+        <ContentControl />
+        <div className={styles["Loader"]}>
+          <div>
+            <span>something went wrong, please try again leter</span>
+          </div>
         </div>
       </div>
     );

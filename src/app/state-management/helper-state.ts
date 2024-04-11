@@ -10,7 +10,7 @@ interface ActionsType {
   generateContentFormAction: boolean;
   productFormActionType: FormActionType;
   formType: FormType;
-  generateContentStatus: "loading" | "completed" | "Inactive";
+  generateContentStatus: "loading" | "completed" | "Inactive"| "error";
 }
 
 const Actions = atom<ActionsType>({

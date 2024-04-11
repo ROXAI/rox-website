@@ -134,6 +134,10 @@ export const useGenerateContent = () => {
     } catch (e: any) {
       setIsDisabled(false);
       clientErrorHandler(e);
+      setAction((prevState) => ({
+        ...prevState,
+        generateContentStatus: "error",
+      }));
     }
   };
 

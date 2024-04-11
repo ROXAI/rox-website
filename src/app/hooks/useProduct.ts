@@ -229,9 +229,7 @@ export const useProductService = () => {
               ? apiRoutes.routeHandler.userBusiness.addProduct
               : apiRoutes.routeHandler.userBusiness.addService;
           const formData = getFormData();
-          console.log("====================================");
-          console.log(formData);
-          console.log("====================================");
+        
           const { data } = await sendData(addProductOrServiceUrl, formData);
           updateProductGlobalState("add", data?.data);
           setIsDisabled(false);
