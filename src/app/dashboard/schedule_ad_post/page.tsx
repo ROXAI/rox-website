@@ -30,7 +30,11 @@ const ScheduleAdPost = () => {
     2: <SelectedAdListing />,
   };
 
-  return <ScheduleAdPostConponent components={components} />;
+  return (
+    <>
+      <ScheduleAdPostConponent components={components} />
+    </>
+  );
 };
 
 export default ScheduleAdPost;

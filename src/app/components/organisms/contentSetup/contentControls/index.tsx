@@ -3,7 +3,7 @@ import { useGenerateContent } from "@/app/hooks/generateContent";
 import styles from "./content-control.module.css";
 import { Popper } from "@mui/base";
 import React from "react";
-import { MainButton } from "@/app/components/atom/CTA";
+import { Button } from "@/app/components/atom/CTA";
 import {
   SelectProducts,
   SelectServices,
@@ -47,7 +47,7 @@ export const ContentControl = () => {
         </div>
 
         <div>
-          <MainButton
+          <Button
             type="button"
             size="small"
             text="send"

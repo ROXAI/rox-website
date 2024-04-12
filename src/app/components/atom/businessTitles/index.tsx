@@ -1,3 +1,4 @@
+"use server"
 import { UserBusinessInfoTypes } from "@/app/ts/types";
 import { DropdownComponent } from "../../organisms/dropdown";
 import { apiQuery } from "@/helpers/api_query";

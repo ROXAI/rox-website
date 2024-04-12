@@ -1,3 +1,4 @@
+"use server"
 import { BusinessTitles } from "../../atom/businessTitles";
 import { SidebarItem } from "../../organisms/AITools";
 import { Automation } from "../../organisms/automation";

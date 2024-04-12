@@ -17,3 +17,11 @@
   opacity: 0.5;
   cursor: not-allowed;
 }
+
+@media screen and (max-width: 810px) {
+  .Btn {
+    min-width: 2rem;
+    height: 3rem;
+    font-size: $base-font-size;
+  }
+}

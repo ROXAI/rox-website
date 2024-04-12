@@ -30,3 +30,20 @@
   background-color: rebeccapurple;
   border-radius: 50%;
 }
+
+.MenuBarWrapper {
+  margin-left: 12px;
+  display: flex;
+  align-items: center;
+}
+
+.MenuBar {
+  display: none;
+  margin-right: 12px;
+}
+
+@media screen and (max-width: 810px) {
+  .MenuBar {
+    display: block;
+  }
+}

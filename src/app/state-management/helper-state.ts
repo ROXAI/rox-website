@@ -10,7 +10,7 @@ interface ActionsType {
   generateContentFormAction: boolean;
   productFormActionType: FormActionType;
   formType: FormType;
-  generateContentStatus: "loading" | "completed" | "Inactive"| "error";
+  generateContentStatus: "loading" | "completed" | "Inactive" | "error";
 }
 
 const Actions = atom<ActionsType>({
@@ -92,6 +92,13 @@ const editAdContent = atom({
   },
 });
 
+const sidebarvisibility = atom({
+  key: uuidv4(),
+  default: false,
+});
+
+export const useSideBarVisibility = () => useRecoilState(sidebarvisibility)
+
 export const useEditAdContentState = () => useRecoilState(editAdContent);
 export const useContentGenComponents = () =>
   useRecoilState(contentGenComponents);
@@ -116,4 +123,4 @@ const selectedAds = atom<adContent[]>({
   key: uuidv4(),
   default: [],
 });
-export const useSelectedAds = () => useRecoilState(selectedAds)
+export const useSelectedAds = () => useRecoilState(selectedAds);

@@ -34,31 +34,6 @@ export const Button: React.FC<ButtonProps> = ({
   );
 };
 
-export const MainButton: React.FC<ButtonProps> = ({
-  text,
-  type,
-  size,
-  disabled,
-  handler,
-}) => {
-  const BtnSize = size === "medium" ? 10 : size === "small" ? 7 : 7;
-  const classes = disabled
-    ? `${styles["MainBtn"]} ${styles["Btn-disabled"]}`
-    : styles["MainBtn"];
-
-  return (
-    <button
-      style={{ width: `${BtnSize}rem` }}
-      className={classes}
-      type={type}
-      onClick={handler}
-      disabled={disabled}
-    >
-      {text}
-    </button>
-  );
-};
-
 export const AddBtn: React.FC<ButtonProps> = ({ handler, type, text }) => {
   return (
     <button onClick={handler} className={styles["Add"]} type={type}>
