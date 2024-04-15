@@ -1,6 +1,5 @@
-"use client";
 import { useBusinessOperations } from "@/app/hooks/user-business-operations";
-import { userBusinessInfoState } from "@/app/state-management/context";
+import { useBusinessInfoState } from "@/app/state-management/context";
 import { useBusinessProfileState } from "@/app/state-management/helper-state";
 import { UserBusinessInfoTypes } from "@/app/ts/types";
 import { Dropdown } from "keep-react";
@@ -16,7 +15,7 @@ export const DropdownComponent: React.FC<DropdownComponentProps> = ({
   data,
 }) => {
   const { retrieveBusinessData } = useBusinessOperations();
-  const [businessInfo, setBusinessInfo] = userBusinessInfoState();
+  const [businessInfo, setBusinessInfo] = useBusinessInfoState();
   const [_, setBusinessProfileData] = useBusinessProfileState();
   const { push, prefetch } = useRouter();
   const handleChange = () => {

@@ -1,16 +1,28 @@
-"use client";
-import { useSideBarVisibility } from "@/app/state-management/helper-state";
 import { Sidebar } from "../../sidebar";
-import styles from "./mobile-sidbar.module.scss";
+import { UserBusinessInfoTypes } from "@/app/ts/types";
+import { apiQuery } from "@/helpers/api_query";
+import { apiRoutes } from "@/data/routes";
+import { serverErrorLogger } from "@/helpers/logger";
 
-export const SideBarForMobileView = () => {
-  const [showSideBar] = useSideBarVisibility();
-  // if (showSideBar)
-    return (
-      <div className={styles["Container"]}>
-        <Sidebar />
-      </div>
-    );
+interface BusinessList {
+  businessInfoData: UserBusinessInfoTypes;
+}
 
-  return <></>;
+export const getBusinesses = async ():Promise<BusinessList> => {
+  const apiQueryData = apiQuery();
+  const businessInfoUrl = apiRoutes.user.userBusinessInfo;
+
+  const res = await apiQueryData(businessInfoUrl);
+  const businessProfile = await res.json();
+  if (!res.ok) serverErrorLogger("PROFILE_ERROR", businessProfile?.error || "");
+  return { businessInfoData: businessProfile.data } as BusinessList;
+};
+
+export const SideBarForMobileView = async () => {
+  try {
+    const { businessInfoData } = await getBusinesses();
+    return <Sidebar data={businessInfoData} />;
+  } catch (error: any) {
+    return <Sidebar data={{} as any} />;
+  }
 };

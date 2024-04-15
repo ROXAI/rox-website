@@ -11,28 +11,11 @@
   margin-right: auto;
 }
 
-.left {
-  width: 20%;
-}
-
 /* i pad */
 @media screen and (max-width: 810px) {
-  .left {
-    width: 40%;
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-
   .right {
     width: 100%;
   }
 }
 
-/* smart phone */
 
-@media screen and (max-width: 474px) {
-  .left {
-    width: 70%;
-  }
-}

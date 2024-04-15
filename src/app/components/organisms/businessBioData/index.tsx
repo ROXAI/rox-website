@@ -3,11 +3,11 @@ import styles from "./business-bio-data.module.css";
 import { Paragraph, Title } from "../../atom/typography";
 import { EditIcon } from "../../atom/icons";
 import { useBusinessProfileSetup } from "@/app/hooks/businessProfile-setup";
-import { userBusinessInfoState } from "@/app/state-management/context";
+import { useBusinessInfoState } from "@/app/state-management/context";
 
 export const BusinessInfo = () => {
   const { openBusinessInfoForm } = useBusinessProfileSetup();
-  const [{ currentSelection }] = userBusinessInfoState();
+  const [{ currentSelection }] = useBusinessInfoState();
   const { _id, businessName, description } = currentSelection;
   return (
     <>

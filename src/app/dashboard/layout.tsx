@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import layoutStyles from "./dashboard-layout.module.css";
-import { Sidebar } from "../components/template/sidebar";
 import { NewsBar } from "../components/template/newsbar";
+import { SideBarForMobileView } from "../components/template/mobile-view/sidebar";
 
 export const metadata: Metadata = {
   title: "dashboard",
@@ -17,9 +17,7 @@ export default function DashboardLayout({
     <main>
       <NewsBar userEmail={"nick@gmail.com"} />
       <div className={layoutStyles["Dashboard"]}>
-        <div className={layoutStyles["left"]}>
-          <Sidebar />
-        </div>
+        <SideBarForMobileView />
         <div className={layoutStyles["right"]}>{children}</div>
       </div>
     </main>

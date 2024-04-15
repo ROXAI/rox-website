@@ -1,6 +1,24 @@
 .Container {
-  width: 70vw;
-  position: absolute;
-  top: 0;
-  left: 0;
+  width: 20%;
+}
+
+.hide-sidebar {
+  display: none;
+}
+/* i pad */
+@media screen and (max-width: 810px) {
+  .Container {
+    width: 40%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
+/* smart phone */
+
+@media screen and (max-width: 474px) {
+  .Container {
+    width: 70%;
+  }
 }

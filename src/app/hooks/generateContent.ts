@@ -8,7 +8,7 @@ import {
 } from "../state-management/helper-state";
 import { useAlertHook } from "./alertHook";
 import { getToken } from "../Actions";
-import { userBusinessInfoState } from "../state-management/context";
+import { useBusinessInfoState } from "../state-management/context";
 import { useGeneratedContentState } from "../state-management/adPromotionContext";
 import axios from "../../helpers/axios";
 import { apiRoutes } from "@/data/routes";
@@ -27,7 +27,7 @@ export const useGenerateContent = () => {
     useContentGenerationState();
 
   const [componentSettings, setContentGenComponent] = useContentGenComponents();
-  const [businessData] = userBusinessInfoState();
+  const [businessData] = useBusinessInfoState();
   const [adContent, setAdContent] = useGeneratedContentState();
   const [editAdContent, setEditAdContent] = useEditAdContentState();
   // api hooks

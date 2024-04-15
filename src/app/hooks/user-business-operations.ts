@@ -1,16 +1,16 @@
 import { apiRoutes } from "@/data/routes";
 import { logger } from "@/helpers/logger";
-import { ErrorType, businessInfoData } from "@/app/ts/types";
+import { ErrorType } from "@/app/ts/types";
 import axios, { AxiosError } from "axios";
 import {
   useProductAndServicesState,
-  userBusinessInfoState,
+  useBusinessInfoState,
 } from "../state-management/context";
 import { useLoadSpinnerState } from "../state-management/helper-state";
 import { ApplicationIdKeys } from "../ts/enums";
 
 export const useBusinessOperations = () => {
-  const [_, setBusinessInfo] = userBusinessInfoState();
+  const [_, setBusinessInfo] = useBusinessInfoState();
   const [__, setProductsAndServices] = useProductAndServicesState();
   const [___, setLoadSpinner] = useLoadSpinnerState();
   const retrieveBusinessData = async (_id: string) => {

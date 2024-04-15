@@ -9,12 +9,12 @@ import {
   useActionState,
   useBusinessProfileState,
 } from "../state-management/helper-state";
-import { userBusinessInfoState } from "../state-management/context";
+import { useBusinessInfoState } from "../state-management/context";
 
 export const useBusinessProfileSetup = () => {
   const { push } = useRouter();
   const [{ businessFormAction }, setCloseProductForm] = useActionState();
-  const [_, setBusinessInfo] = userBusinessInfoState();
+  const [_, setBusinessInfo] = useBusinessInfoState();
   const [businessProfileData, setBusinessProfileData] =
     useBusinessProfileState();
 

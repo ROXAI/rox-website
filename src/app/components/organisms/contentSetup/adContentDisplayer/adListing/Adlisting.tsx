@@ -3,13 +3,13 @@ import styles from "./ad-listing.module.css";
 import { useGeneratedContentState } from "@/app/state-management/adPromotionContext";
 import { AdContentItem } from "..";
 import { apiRoutes } from "@/data/routes";
-import { userBusinessInfoState } from "@/app/state-management/context";
+import { useBusinessInfoState } from "@/app/state-management/context";
 import { useEffect, useState } from "react";
 import { useApiQuery } from "@/app/hooks/apiQuery";
 import { ContentBlock } from "@/app/components/molecules/text_block";
 
 const AdListing = () => {
-  const [{ currentSelection }] = userBusinessInfoState();
+  const [{ currentSelection }] = useBusinessInfoState();
   const [ads, setAds] = useGeneratedContentState();
   const [error, setError] = useState("");
   const query = useApiQuery();

@@ -40,7 +40,7 @@ const ProductAndServices = atom<BusinessProductAndServices>({
   },
 });
 
-const UserProfile = atom<UserProfile>({
+const UserProfiles = atom<UserProfile>({
   key: uuidv4(),
   default: {
     _id: "",
@@ -66,7 +66,7 @@ const BusinessProfile = atom<UserBusinessInfoTypes>({
   },
 });
 
-export const userBusinessInfoState = () =>
+export const useBusinessInfoState = () =>
   useRecoilState<UserBusinessInfoTypes>(BusinessProfile);
 
 export const useProductAndServicesState = () =>

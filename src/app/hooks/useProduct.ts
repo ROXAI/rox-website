@@ -12,14 +12,14 @@ import axios from "axios";
 
 import {
   useProductAndServicesState,
-  userBusinessInfoState,
+  useBusinessInfoState,
 } from "../state-management/context";
 import { useRouter } from "next/navigation";
 import { FormActionType, FormType, ProductsAndSevices } from "../ts/types";
 import { ApplicationIdKeys } from "../ts/enums";
 
 export const useProductService = () => {
-  const [{ currentSelection }] = userBusinessInfoState();
+  const [{ currentSelection }] = useBusinessInfoState();
   const { error, setError, isDisabled, clientErrorHandler, setIsDisabled } =
     useAlertHook();
 
