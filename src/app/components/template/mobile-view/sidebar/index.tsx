@@ -26,3 +26,5 @@ export const SideBarForMobileView = async () => {
     return <Sidebar data={{} as any} />;
   }
 };
+
+// minore
