@@ -6,6 +6,7 @@ import { Automation } from "../../organisms/automation";
 import styles from "./sidebar.module.css";
 import { useEffect, useState } from "react";
 import { UserBusinessInfoTypes } from "@/app/ts/types";
+import { layoutSizes } from "@/data/layout";
 
 interface TestSideBarProps {
   data: UserBusinessInfoTypes;
@@ -16,7 +17,7 @@ export const Sidebar: React.FC<TestSideBarProps> = ({ data }: any) => {
   const [isDesktop, setIsDesktop] = useState(false);
 
   useEffect(() => {
-    if (window.innerWidth > 810) setIsDesktop(true);
+    if (window.innerWidth > layoutSizes.ipad.width) setIsDesktop(true);
   }, []);
   return (
     <div
