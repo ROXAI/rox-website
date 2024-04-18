@@ -1,8 +1,8 @@
 import { atom, useRecoilState } from "recoil";
 import { v4 as uuidv4 } from "uuid";
-import { adContent } from "../ts/interface";
+import { adContent as adContentType } from "../ts/interface";
 
-const adContent = atom<adContent[]>({
+const adContent = atom<adContentType[]>({
   key: uuidv4(),
   default: [
     {

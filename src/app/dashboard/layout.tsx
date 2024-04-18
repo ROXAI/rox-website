@@ -3,6 +3,8 @@ import layoutStyles from "./dashboard-layout.module.css";
 import { NewsBar } from "../components/template/newsbar";
 import { SideBarForMobileView } from "../components/template/mobile-view/sidebar";
 
+
+const dynamic = 'force-dynamic'
 export const metadata: Metadata = {
   title: "dashboard",
   description: "user dashboard",

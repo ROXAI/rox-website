@@ -43,11 +43,12 @@ const AdListing = () => {
   return (
     <>
       <div>
-        <ContentBlock headingText="Your Scheduled Tweets">
-          Here's a handy list of all your drafted tweets ready to be posted.
-          Feel free to click the check box next to any tweet to make edits or
-          remove it from the schedule.
-        </ContentBlock>
+        <ContentBlock
+          headingText="Your Scheduled Tweets"
+          paragraphText="Here's a handy list of all your drafted tweets ready to be posted.
+            Feel free to click the check box next to any tweet to make edits or
+            remove it from the schedule."
+        />
       </div>
       <div className={styles["AdListingContainer"]}>
         {ads?.map((ad) => (

@@ -16,17 +16,17 @@ export const TextBlock: React.FC<TextBlockProps> = ({ title, description }) => {
 
 interface ContentBlockProps {
   headingText: string;
-  children: string;
+  paragraphText: string;
 }
 
 export const ContentBlock: React.FC<ContentBlockProps> = ({
   headingText,
-  children,
+  paragraphText,
 }) => {
   return (
     <div className={sasStyles["Container"]}>
       <h1 className={sasStyles["Heading"]}>{headingText}</h1>
-      <p className={sasStyles["Desc"]}>{children}</p>
+      <p className={sasStyles["Desc"]}>{paragraphText}</p>
     </div>
   );
 };

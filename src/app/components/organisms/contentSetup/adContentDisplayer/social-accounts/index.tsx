@@ -8,10 +8,11 @@ const SocialAccounts = () => {
   return (
     <>
       <div>
-        <ContentBlock headingText="Connect & Share the Buzz!">
-          Link your preferred social media profile (Twitter, Instagram, etc.) to
-          seamlessly schedule your tweets.
-        </ContentBlock>
+        <ContentBlock
+          headingText="Connect & Share the Buzz!"
+          paragraphText=" Link your preferred social media profile (Twitter, Instagram, etc.) to
+          seamlessly schedule your tweets."
+        />
       </div>
       <div className={styles["Container"]}>
         <Suspense fallback={<div>loading</div>}>
