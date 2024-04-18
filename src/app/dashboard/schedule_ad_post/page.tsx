@@ -25,7 +25,7 @@ const ScheduleAdPost = () => {
     [key: number]: any;
   }
   const components: Con = {
-    0: <AdListing />,
+    // 0: <AdListing />,
     1: <SocialAccounts />,
     2: <SelectedAdListing />,
   };

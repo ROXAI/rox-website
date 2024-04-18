@@ -11,7 +11,7 @@ interface ScheduleAdPostProps {
 export const ScheduleAdPostConponent: React.FC<ScheduleAdPostProps> = ({
   components,
 }) => {
-  const [navCount, setNavCount] = useState(0);
+  const [navCount, setNavCount] = useState(1);
 
   return (
     <div className={styles["Container"]}>
@@ -23,7 +23,7 @@ export const ScheduleAdPostConponent: React.FC<ScheduleAdPostProps> = ({
           type="button"
           size="medium"
           handler={() => setNavCount((prevState) => prevState - 1)}
-          disabled={navCount === 0}
+          disabled={navCount === 1}
         />
         <Button
           text="next"
@@ -44,7 +44,7 @@ const Navigation: React.FC<NavigationProps> = ({ navCount }) => {
   return (
     <div className={styles["Navigation-container"]}>
       <div className={styles["Line"]}></div>
-      <InconStep1 iconName="list" step={navCount === 0} />
+      {/* <InconStep1 iconName="list" step={navCount === 0} /> */}
       <InconStep1 iconName="accounts" step={navCount === 1} />
       <InconStep1 iconName="final" step={navCount === 2} />
     </div>

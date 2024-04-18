@@ -9,15 +9,17 @@ const SocialAccounts = () => {
     <>
       <div>
         <ContentBlock headingText="Connect & Share the Buzz!">
-        Link your preferred social media profile (Twitter, Instagram, etc.) to seamlessly schedule your tweets.
+          Link your preferred social media profile (Twitter, Instagram, etc.) to
+          seamlessly schedule your tweets.
         </ContentBlock>
       </div>
       <div className={styles["Container"]}>
         <Suspense fallback={<div>loading</div>}>
           <InstagramMiniCard />
         </Suspense>
-
-        <FacebookCard />
+        <Suspense fallback={<div>loading</div>}>
+          <FacebookCard />
+        </Suspense>
         <SocialCard
           icon="/icons8-twitterx.svg"
           name="twitterX"
